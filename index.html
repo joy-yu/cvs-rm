@@ -1,0 +1,61 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>666</title>
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  
+  <!-- 开启响应式 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <!-- SEO页面关键词 -->
+  <meta name="keywords" content="your keywords">
+  
+  <!-- SEO页面描述 -->
+  <meta name="description" content="your description">
+  <link rel="stylesheet" href="./rm/style.css">
+
+</head>
+<body>
+
+  <div class="play-section">
+    <canvas id="draw"></canvas>
+    <div class="split-section">
+      <div class="sp-1"></div>
+      <div class="sp-2"></div>
+      <div class="sp-3"></div>
+    </div>
+    <div class="confirm-section">
+      <div class="cf-1 hidden"></div>
+      <div class="cf-2 hidden"></div>
+      <div class="cf-3 hidden"></div>
+      <div class="cf-4 hidden"></div>
+    </div>
+  </div>
+
+  <input type="file" id="uploadBtn" />
+  <button type="button" id="startBtn" disabled>开始</button>
+  <button type="button" id="stopBtn" disabled>停止</button>
+  <img src="./rm/btn.png" id="btn" alt="" style="display: none;">
+  <script src="./rm/rm.js"></script>
+</body>
+</html>
+
+<!--
+//E1 FC 01 00，四字节int32，歌曲时长
+//A1 01 00 00，四字节int32，歌曲节拍
+
+//71 02 00 00 00 00 00 00 00 00 68 40，12字节为单位的节拍信息，总组数和节拍数相同。
+//前四字节int32，节拍的时间戳。
+//后八字节double，BPM。
+
+//03 03固定值，间隔数据。
+
+//36 03 00 00，四字节Int32，谱面动作数量。
+
+//02 00 DE 0F 00 00 01 71 02 00 00，11字节为单位的动作信息，总组数和谱面动作数量相同。
+//前2个字节Int16，表示动作类型。02 00
+//三到六的四字节Int32，表示动作的时间戳。DE 0F 00 00
+//第七个Byte类型，表示动作的起始轨道00开始。01
+//最后四字节Int32，表示动作的持续时间，单键为0。 71 02 00 00
+-->
