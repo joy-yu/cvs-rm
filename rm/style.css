@@ -51,7 +51,7 @@ body {
   position: absolute;
   bottom: 0;
   width: calc(25% - 1px);
-  height: 600%;
+  height: 400%;
   background: linear-gradient(to bottom, transparent 20%, #e6e6e6 100%);
 }
 .cf-1 {
